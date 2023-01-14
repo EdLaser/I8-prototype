@@ -33,21 +33,22 @@
         </div>
         <div class="forma">
             <form action="" method="post">
+                {% csrf_token %}
                 <div class="inputs">
                     <label>ID</label>
-                    <input type="text">
+                    <input type="text" name="id">
                 </div>
                 <div class="inputs">
                     <label> Titel</label>
-                    <input type="text">
+                    <input type="text" name="Titel">
                 </div>
                 <div class="inputs">
                     <label> Beschreibung</label>
-                    <input type="text">
+                    <input type="text" name="Beschreibung">
                 </div>
                 <div class="inputs">
                     <label>Ansprechpartner</label>
-                    <input type="text">
+                    <input type="text" name="Ansprechpartner">
                 </div>
                 <div class="final">
                     <input type="reset" value="Reset" class="reset">
