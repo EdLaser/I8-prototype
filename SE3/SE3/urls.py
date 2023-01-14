@@ -22,5 +22,5 @@ urlpatterns = [
     path('members/', views.members, name='members'),
     path('members/projekt/',views.projekt, name='projekt' ),
     path('members/projekt/projektansicht/',views.projektansicht, name='projektansicht'),
-    path('members/projekt/projekt-erstellen',views.projekterstellen, name='projekt-erstellen'),
+    path('members/projekt/projekt-erstellen/',views.projekterstellen, name='projekt-erstellen'),
 ]
