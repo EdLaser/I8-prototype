@@ -8,3 +8,9 @@ def members(request):
 
 def projekt(request):
   return render(request,'app2/templates/projekt.html')
+
+def projektansicht(request):
+  return render(request,'app2/templates/projektansicht.html')  
+
+def projekterstellen(request):
+  return render(request,'app2/templates/projekt-erstellen.html')
