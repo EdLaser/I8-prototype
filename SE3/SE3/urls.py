@@ -19,5 +19,6 @@ from app2 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('members/', views.members, name='members'),
+    path('members/', views.members, name='members'),
+    path('members/projekt/',views.projekt, name='projekt' ),
 ]

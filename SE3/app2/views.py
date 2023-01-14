@@ -4,5 +4,7 @@ from django.template import loader
 # Create your views here.
 
 def members(request):
-  template = loader.get_template('index.html')
-  return HttpResponse(template.render())
+  return render(request,'app2/templates/index.html')
+
+def projekt(request):
+  return render(request,'app2/templates/projekt.html')
