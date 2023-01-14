@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dozentenansicht</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background: #99C2A2;
+            background: -webkit-linear-gradient(bottom left, #99C2A2, #a3dff1);
+            background: -moz-linear-gradient(bottom left, #99C2A2, #8cd8e6);
+            background: linear-gradient(to top right, #99C2A2, #95dbe8);
+        }
+
+        header {
+            width: 100%;
+            height: 10vh;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(138, 168, 97);
+            color: rgb(10, 18, 105);
+        }
+
+        main {
+            width: 100%;
+            height: 85vh;
+            padding: 10px;
+        }
+
+        main nav {
+            padding: 10px;
+        }
+
+        main nav ul li {
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 2px;
+        }
+
+        main nav ul li:hover {
+            background-color: rgb(221, 174, 198);
+        }
+
+        main nav ul li a {
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        main .navigate {
+            padding: 10px;
+        }
+
+        main .navigate ul li {
+            background-color: rgb(234, 159, 159);
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        main .navigate ul li:hover {
+            background-color: rgb(94, 199, 121);
+        }
+
+        main .navigate ul li a {
+            font-size: 28px;
+            color: rgb(70, 70, 214);
+            font-weight: bold;
+        }
+
+        main .forma {
+            padding: 20px;
+        }
+
+        main .forma form {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        main .forma form .inputs {
+            width: 50%;
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        main .forma form .inputs label {
+            min-width: 150px;
+            font-size: 18px;
+        }
+
+        main .forma form .inputs input {
+            background-color: #babebd;
+            font-size: 18px;
+        }
+
+        main .forma form .final {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        main .forma form .final input {
+            padding: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .save {
+            background: rgb(12, 75, 137);
+            color: #fff;
+        }
+
+        .reset {
+            background: rgb(217, 23, 39);
+            color: #fff;
+        }
+
+        main .forma form .final input:hover {
+            background: rgb(10, 132, 12);
+            color: #fff;
+        }
+
+        footer {
+            width: 100%;
+            height: 5vh;
+            text-align: center;
+            background-color: black;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h2>I8</h2>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li> <a href="#"> Projekt</a></li>
+                <li> <a href="#"> Teams</a> </li>
+                <li> <a href="#">Einstellungen</a></li>
+                <li> <a href="#"> Logout</a></li>
+            </ul>
+        </nav>
+        <div class="navigate">
+            <ul>
+                <li> <a href="#"> Projektansicht</a></li>
+                <li> <a href="#"> Projekt erstellen </a></li>
+
+            </ul>
+        </div>
+        <div class="forma">
+            <form action="" method="post">
+                <div class="inputs">
+                    <label>ID</label>
+                    <input type="text">
+                </div>
+                <div class="inputs">
+                    <label> Titel</label>
+                    <input type="text">
+                </div>
+                <div class="inputs">
+                    <label> Beschriebung</label>
+                    <input type="text">
+                </div>
+                <div class="inputs">
+                    <label>Ansprechpartner</label>
+                    <input type="text">
+                </div>
+                <div class="final">
+                    <input type="reset" value="Reset" class="reset">
+                    <input type="submit" value="speichen" class="save">
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p> CopyRight By Nuha 2023</p>
+    </footer>
+</body>
+
+</html>

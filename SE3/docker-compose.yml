@@ -1,0 +1,25 @@
+version: '3.6'
+
+services:
+  webserver:
+    build: ./
+    command: bash -c "python3 manage.py wait_for_database && python3 manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/usr/src/django_project
+    ports:
+      - 8000:8000
+    container_name: django_webserver
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=dev
+    container_name: postgres_database
+
+volumes:
+  postgres_data:
