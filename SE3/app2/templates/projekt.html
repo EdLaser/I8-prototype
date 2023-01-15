@@ -27,8 +27,10 @@
         <div class="navigate">
             <form>
                 <ul>
-                    <li> <a href="/members/projekt/projektansicht/"> Projektansicht</a></li>
-                    <li> <a href="/members/projekt/projekt-erstellen/"> Projekt erstellen </a></li>
+                    {% for project in projects %}
+                        <li> <a href="{% url 'projektansicht/' project.id %}">Projektansicht: {{ project.id }}</a></li>
+                    {% endfor %}
+                    <li> <a href="{% url 'projekt-erstellen' %}"> Projekt erstellen </a></li>
                 </ul>
 
             </form>
