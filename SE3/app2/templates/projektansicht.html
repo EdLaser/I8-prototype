@@ -28,12 +28,30 @@
             <ul>
                 <li> <a href="#"> Projektansicht</a></li>
                 <li> <a href="/members/projekt/projekt-erstellen/"> Projekt erstellen </a></li>
-
             </ul>
         </div>
-
-        
-
+        <form action="" method="">
+            {% csrf_token %}
+            <div class="inputs">
+                <label>ID</label>
+                <input type="text" name="id" disabled value="{{ project.id }}">
+            </div>
+            <div class="inputs">
+                <label> Titel</label>
+                <input type="text" name="titel" disabled value="{{ project.titel }}">
+            </div>
+            <div class="inputs">
+                <label> Beschreibung</label>
+                <input type="text" name="beschreibung" disabled value="{{ project.beschreibung }}">
+            </div>
+            <div class="inputs">
+                <label>Ansprechpartner</label>
+                <input type="text" name="ansprechpartner" disabled value="{{ project.ansprechpartner }}">
+            </div>
+            <div class="final">
+                <input type="reset" value="Reset" class="reset" disabled>
+                <input type="submit" value="speichen" class="save" disabled>
+            </div>
     </main>
     <footer>
         <p> CopyRight By Nuha 2023</p>
