@@ -32,4 +32,4 @@ def projekterstellen(request):
     new_project = Project(id=id,titel=titel, beschreibung=beschreibung, ansprechpartner=ansprechpartner)
     new_project.save()
 
-    return redirect('projektansicht', given_id = new_project.id)
+    return redirect('projektansicht')
