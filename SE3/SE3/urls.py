@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('members/', views.members, name='members'),
     path('members/projekt/',views.projekt, name='projekt' ),
-    path('members/projekt/projektansicht/',views.projektansicht, name='projektansicht'),
+    path('members/projekt/projektansicht/<int:id>',views.projektansicht, name='projektansicht'),
     path('members/projekt/projekt-erstellen/',views.projekterstellen, name='projekt-erstellen'),
 ]
