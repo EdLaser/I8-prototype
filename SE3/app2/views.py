@@ -24,11 +24,12 @@ def projekterstellen(request):
     return render(request,'app2/templates/projekt-erstellen.html')
   
   if request.method == "POST":
+    id = request.POST.get('id')
     titel = request.POST.get('titel')
     beschreibung = request.POST.get('beschreibung')
     ansprechpartner = request.POST.get('ansprechpartner')
 
-    new_project = Project(titel=titel, beschreibung=beschreibung, ansprechpartner=ansprechpartner)
+    new_project = Project(id=id,titel=titel, beschreibung=beschreibung, ansprechpartner=ansprechpartner)
     new_project.save()
 
     return redirect('projektansicht', given_id = new_project.id)
